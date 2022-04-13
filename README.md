@@ -5,7 +5,6 @@
 **Paradigma**: Sistemas Multiagentes<br>
 
 ## Alunos
-|Matrícula | Aluno |
 | Foto | Matrícula | Nome | GitHub |
 |:--:|:--:|:--:|:--:|
 | <img src="./images/members/andre.jpg" width="100">| 15/0005563 | Andre Lucas Ferreira Lemos de Souza | [@andrelucasf](https://github.com/andrelucasf) 
