@@ -7,3 +7,5 @@ services:
       dockerfile: Dockerfile
     volumes:
       - './src:/app'
+    ports:
+      - '3000:8521'

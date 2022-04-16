@@ -28,6 +28,11 @@ Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcioname
 Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 Insira um manual ou um script para auxiliar ainda mais.
 
+- jupyter (Ipython interactive notebook)
+- matplotlib (Python’s visualization library)
+- mesa (ABM library)
+- numpy (Python’s numerical python library)
+
 ## Uso 
 Explique como usar seu projeto, caso haja algum passo a passo após o comando de execução.
 
