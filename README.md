@@ -18,20 +18,35 @@
 | <img src="./images/members/vini.jpg" width="100">| 17/0115500 | Vinicius Vieira de Souza | [@faco400](https://github.com/faco400) 
 
 ## Sobre 
-O projeto do paradigma de sistemas multiagentes visa desenvolver uma aplicação do jogo truco (com todas as regras) utilizando JADE.
+O projeto do paradigma de sistemas multiagentes visa desenvolver uma aplicação do jogo truco (com todas as regras do tipo paulista) utilizando python.
 
 ## Screenshots
 Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
 
 ## Instalação 
-**Tecnologias**: Java, JADE(Java Agent Development Framework)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
-Insira um manual ou um script para auxiliar ainda mais.
-
-- jupyter (Ipython interactive notebook)
-- matplotlib (Python’s visualization library)
+**Tecnologias**: 
+- jupyter (Ipython interactive notebook)  
+```
+$ pip install notebook
+```
+- matplotlib (Python’s visualization library), source install from git
+```
+$ git clone git://github.com/matplotlib/matplotlib.git
+```
+```
+$ cd matplotlib 
+``` 
+```
+$ python setup.py install
+```
 - mesa (ABM library)
+```
+$ pip install mesa
+```
 - numpy (Python’s numerical python library)
+```
+$ pip install numpy   
+```
 
 ## Uso 
 Explique como usar seu projeto, caso haja algum passo a passo após o comando de execução.
