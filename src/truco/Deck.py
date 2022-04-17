@@ -6,6 +6,7 @@ class Deck():
     def __init__(self):
         self.cards = []
         self.create_deck_of_cards()
+        self.manilhas
 
     def create_deck_of_cards(self):
         # ZAP = Cards(11, 1)
@@ -62,3 +63,11 @@ class Deck():
             return 1
         else:
             return self.vira.weight + 1
+    
+    def define_manilhas(self, manilha):
+        for i in self.cards:
+            x = i.return_weight()
+            if x == manilha:
+                self.manilhas.append(i)
+    
+
