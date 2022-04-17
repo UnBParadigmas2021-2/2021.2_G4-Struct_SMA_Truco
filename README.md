@@ -24,8 +24,8 @@ O projeto do paradigma de sistemas multiagentes visa desenvolver uma aplicação
 Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
 
 ## Instalação 
-**Tecnologias**: 
-Para utilizar o pip nas instalações necessárias para o projeto, é necessário obter o python. Para isso:
+**Tecnologias**:   
+Para utilizar o pip nas instalações necessárias para o projeto, é necessário obter o python. Para isso:  
 1. Atualize alista de pacotes e instale os pré-requisitos:
 ```
 $ sudo apt update
