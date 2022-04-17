@@ -25,7 +25,7 @@ Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcioname
 
 ## Instalação 
 **Tecnologias**: 
-- jupyter (Ipython interactive notebook)  
+- jupyter (Python interactive notebook)  
 ```
 $ pip install notebook
 ```
