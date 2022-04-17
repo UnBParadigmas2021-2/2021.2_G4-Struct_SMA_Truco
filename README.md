@@ -25,6 +25,24 @@ Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcioname
 
 ## Instalação 
 **Tecnologias**: 
+Para utilizar o pip nas instalações necessárias para o projeto, é necessário obter o python. Para isso:
+1. Atualize alista de pacotes e instale os pré-requisitos:
+```
+$ sudo apt update
+$ sudo apt install software-properties-common
+```
+2. Adicione os _deadsnakes_ a sua lista:
+```
+$ sudo add-apt-repository ppa:deadsnakes/ppa
+```
+3. Finalmente, instale o python (depreferência a ultima versão, mas utilizamos a 3.9 no exemplo)
+```
+$ sudo apt install python3.9
+```
+4. E utilize o próprio python para obter o pip
+```
+$ python get-pip.py
+```
 - jupyter (Python interactive notebook)  
 ```
 $ pip install notebook
