@@ -21,46 +21,21 @@
 O projeto do paradigma de sistemas multiagentes visa desenvolver uma aplicação do jogo truco (com todas as regras do tipo paulista) utilizando python.
 
 ## Instalação 
+
 **Tecnologias**:   
-Para utilizar o pip nas instalações necessárias para o projeto, é necessário obter o python. Para isso:  
-1. Atualize alista de pacotes e instale os pré-requisitos:
-```
-$ sudo apt update
-$ sudo apt install software-properties-common
-```
-2. Adicione os _deadsnakes_ a sua lista:
-```
-$ sudo add-apt-repository ppa:deadsnakes/ppa
-```
-3. Finalmente, instale o python (depreferência a ultima versão, mas utilizamos a 3.9 no exemplo)
-```
-$ sudo apt install python3.9
-```
-4. E utilize o próprio python para obter o pip
-```
-$ python get-pip.py
-```
-- jupyter (Python interactive notebook)  
-```
-$ pip install notebook
-```
-- matplotlib (Python’s visualization library), source install from git
-```
-$ git clone git://github.com/matplotlib/matplotlib.git
-```
-```
-$ cd matplotlib 
-``` 
-```
-$ python setup.py install
-```
+
+- jupyter (Ipython interactive notebook)
+- matplotlib (Python’s visualization library)
 - mesa (ABM library)
-```
-$ pip install mesa
-```
 - numpy (Python’s numerical python library)
+
+A instalação é extremamente simples, após instalar git, docker e docker-compose, basta rodar o projeto usando ambos. Numa distribuição GNU/Linux, os seguintes passos são o suficiente:
+
 ```
-$ pip install numpy   
+$ git clone https://github.com/UnBParadigmas2021-2/2021.2_G4-Struct_SMA_Truco.git
+$ sudo apt install docker docker-compose
+$ cd 2021.2_G4-Struct_SMA_Truco/
+$ docker-compose up --build
 ```
 
 ## O Truco Paulista
