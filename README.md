@@ -99,6 +99,15 @@ Lembrando que Manilha é a carta mais forte da partida, depois do 3, e dos naipe
 ## Uso 
 Explique como usar seu projeto, caso haja algum passo a passo após o comando de execução.
 
+## Screnshots
+![O jogo](images/game/image1.jpeg)
+
+![O jogo](images/game/image2.jpeg)
+
+![O jogo](images/game/image3.jpeg)
+
+![O jogo](images/game/final.jpeg)
+
 ## Vídeo
 Adicione 1 ou mais vídeos com a execução do projeto.
 
@@ -106,4 +115,5 @@ Adicione 1 ou mais vídeos com a execução do projeto.
 Quaisquer outras informações sobre seu projeto podem ser descritas a seguir.
 
 ## Fontes
-Caso utilize materiais de terceiros, referencie-os adequadamente.
+* https://github.com/anthonyzutter/Truco-Jogo
+* https://github.com/projectmesa/mesa/tree/main/examples
