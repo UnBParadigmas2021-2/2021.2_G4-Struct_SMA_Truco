@@ -20,6 +20,21 @@
 ## Sobre 
 O projeto do paradigma de sistemas multiagentes visa desenvolver uma aplicação do jogo truco (com todas as regras do tipo paulista) utilizando python.
 
+## Resumo dasprincipais regras do truco paulista
+
+- É jogado com 4 jogadores, formando 2 duplas;
+- A partida de truco é chamada de queda, disputada em melhor de 3 jogos, divididas por mãos;
+- Quem fizer 12 pontos vence um jogo;
+- Cada mão começa valendo 1 ponto;
+- A mão é dividida em melhor de três rodadas;
+- Manilhas são variáveis a cada mão, a carta logo acima da Vira.
+- A ordem dos naipes das manilhas é fixa: Paus, Copas, Espadas, Ouros;
+- A sequência das cartas é: 3 > 2 > A > k > J > Q > 7 > 6 > 5 > 4
+- Mão de onze é quando uma das duplas atinge 11 pontos. Os jogadores podem olhar as cartas um do outro antes de jogar.
+- É possível disputar a mão de ferro quando empata em 11 a 11. Nesse caso, todos os jogadores disputam a mão as cegas.
+- Pedir truco aumenta o valor da mão para três pontos
+- Os aumentos seguintes ao truco são: seis, nove, doze e queda
+
 ## Screenshots
 Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
 
