@@ -40,10 +40,11 @@ class PlayerAgent(Agent):
     played_card = -1
     for i in range(len(self.mao)):
       
-      min_card = min_card if self.mao[i][2] < self.mao[min_card][2] else i
-      max_card = max_card if self.mao[i][2] > self.mao[max_card][2] else i
+      min_card = min_card if self.mao[i][2] > self.mao[min_card][2] else i
+      max_card = max_card if self.mao[i][2] < self.mao[max_card][2] else i
 
-    if self.model.play == {}:
+    # print (self.mao[min_card], self.mao[max_card])
+    if len(self.model.play) == 0:
       played_card = min_card
     elif self.compare_cards(self.model.play['play'], self.mao[max_card]) == 1:
       played_card = max_card
@@ -54,9 +55,8 @@ class PlayerAgent(Agent):
 
     self.mao.pop(played_card)
 
-    print(f'Maior carta na mesa = {self.model.play}')
-    print(f'Carta a ser jogada = {play}')
     if self.model.play == {} or self.compare_cards(self.model.play['play'], play['play']) == 1:
       self.model.play = play
-    print(f'Maior carta na mesa dps de ser atualizada = {self.model.play}')
+
+    print(f"{self.name} Jogou um {play['play'][0]} de {play['play'][1]}")
     
