@@ -6,6 +6,8 @@ class Deck():
     def __init__(self):
         self.cards = []
         self.create_deck_of_cards()
+        self.manilha = 0
+        self.vira = 0
 
     def create_deck_of_cards(self):
         for i in range(10, 0, -1):
@@ -14,26 +16,25 @@ class Deck():
     def shuffle_deck(self):
         random.shuffle(self.cards)
     
-    def define_vira(self, deck):
-        # print("antes: "+ str(self.cards[0].quantity)) # Debbug do vira antes
-        self.vira = deck.remove_card() # o topo do deck se torna vira
-        # print("depois: "+ str(self.cards[0].quantity)) # Debbug do vira depois
+    def define_vira(self):
+        self.vira = self.remove_card()
 
     def remove_card(self):
-        # Percorre todo o deck de cartas
-        self.shuffle_deck() # embaralha novamente
+        self.shuffle_deck()
         for pos in range(10):
-            if self.cards[pos].quantity > 0: # se a carta de valor x tiver acabado, checa a seguinte do baralho
-                return self.cards[pos] # retorna a carta no topo
+            if self.cards[pos].quantity > 0:
+                return self.cards[pos]
 
     def define_manilha(self):
-        if self.vira.weight == 10:
-            return 1
-        else:
-            return self.vira.weight + 1
-    
-    def define_manilhas(self, manilha):
-        for i in self.cards:
-            x = i.return_weight()
-            if x == manilha:
-                self.manilhas = i
+        return self.vira.weight % 10 + 1
+
+    def define_manilhas(self):
+        self.define_vira()
+        manilha = self.define_manilha()
+        for i, item in enumerate(self.cards):
+            if item.return_weight() == manilha:
+                self.cards[i].set_weight(11)
+                break
+
+    def get_vira(self):
+        return self.vira.name

@@ -8,19 +8,20 @@ class PlayerAgent(Agent):
     self.mao = []
 
   def set_hand(self):
-    for i in range(3):
+    for _ in range(3):
       card = self.model.deck.remove_card()
       naipe = card.return_random_naipe()
-      number_card = card.return_number_card()
+      number_card = card.name
       self.mao.append([number_card, naipe, card.weight])
 
   def step(self):
     if not self.mao:
       self.set_hand()
-      print("Ola, eu sou o agente", self.name, "e essas são minhas cartas:")
-      for i in range(3):
-        print(self.mao[i][0], "de", self.mao[i][1])
+      print("Ola, eu sou o jogador", self.name, "e essas são minhas cartas:")
+      cards_list = [self.mao[i][0] + " de " + self.mao[i][1] for i in range(3)]
+      print(", ".join(cards_list))
       return
+
     play = self.mao.pop()
-    print(self.name, "joga", play[0], "de", play[1])
+    print(self.name, "joga", play[0], "de", play[1], play[2])
     self.model.play.append({'pair': self.pair, 'play': play})
