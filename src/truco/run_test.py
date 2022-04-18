@@ -26,7 +26,5 @@ if __name__ == '__main__':
   #   nome = int(input("Digite o nome jo jogador: "+ str(i)))
   #   jogador[i] = game.criar_player(nome)
 
-
-  player_name = str(input("Nome do Jogador 1: "))
-  player = PlayerModel(player_name, 4, deck)
+  player = PlayerModel(4, deck)
   player.step()

@@ -1,9 +1,9 @@
 from mesa import Agent
 
 class PlayerAgent(Agent):
-  def __init__(self, unique_id, model, deck):
+  def __init__(self, unique_id, model, deck, name):
     super().__init__(unique_id, model)
-    self.name = str("Player "+ str(unique_id))
+    self.name = name
     self.deck = deck
     self.mao = []
 
