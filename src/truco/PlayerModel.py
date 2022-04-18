@@ -6,52 +6,62 @@ class PlayerModel(Model):
   "Um jogador com nome e deck de cartas"
 
   def __init__(self, N, deck):
-    # self.nome = nome # Setando o nome do player
-    # self.mao = [] # Setando a mao do player
     self.agents = []
-    self.schedule = BaseScheduler(self) # instanciando um scheduler para ordenar os steps dos agentes
     self.num_agents = N
     self.play = []
     self.pairs_points = [0, 0]
     self.partial_pair_points = [0, 0]
     self.deck = deck
 
-    for i in range(self.num_agents):
-      # player_name = str(input("Nome do Jogador " + str(i+1) + " : "))
-      names = ['a','b','c','d']
-      player_name = names[i]
-      a = PlayerAgent(i, self, player_name, i%2) # Criando o PlayerAgent
-      self.schedule.add(a) # adicionando o agente ao schedule
-      self.agents.append(a)
+  def step(self):
+    if not self.agents:
+      self.schedule = BaseScheduler(self)
+      for i in range(self.num_agents):
+        # player_name = str(input("Nome do Jogador " + str(i+1) + " : "))
+        names = ['a','b','c','d']
+        player_name = names[i]
+        a = PlayerAgent(i, self, player_name, i%2)
+        self.schedule.add(a)
+        self.agents.append(a)
+      self.schedule.step()
+      print('--------------------------')
+    
+    self.play_round()
 
-  def step(self): # Usado para debugar o step dos agentes. No momento imprime no console o id do agente
-    self.schedule.step()
-    print('--------------------------')
+  def step_point(self):
+    pair_play = [self.get_winning_play(self.play[0], self.play[2]), self.get_winning_play(self.play[1], self.play[3])]
+    best_play = self.get_winning_play(pair_play[0], pair_play[1])
+    self.partial_pair_points[best_play['pair']] += 1
+    print("Ponto da dupla", best_play['pair'] + 1)
+
+  def play_round(self):
     for _ in range(3):
       self.schedule = BaseScheduler(self)
-      for j in self.agents:
-        self.schedule.add(j)
+      for agent in self.agents:
+        self.schedule.add(agent)
       self.schedule.step()
       self.step_point()
       self.play = []
       print('--------------------------')
-      if self.partial_pair_points[0] == 2:
-        print("Dupla 1 ganhou!")
-        break
-      if self.partial_pair_points[1] == 2:
-        print("Dupla 2 ganhou!")
+      if self.has_partial_winner():
         break
 
+  def has_partial_winner(self):
+    if self.partial_pair_points[0] == 2:
+      print("Dupla 1 ganhou!")
+      return True
+    if self.partial_pair_points[1] == 2:
+      print("Dupla 2 ganhou!")
+      return True
+    return False
 
-  def step_point(self):
-    pair_play = [0,0]
-    for play in self.play:
-      pair_play[play['pair']] = max(pair_play[play['pair']], play['play'][2])
-    if pair_play[0] > pair_play[1]:
-      print("Ponto da dupla 1")
-      self.partial_pair_points[0] += 1
-    elif pair_play[1] > pair_play[0]:
-      print("Ponto da dupla 2")
-      self.partial_pair_points[1] += 1
+  def get_winning_play(self, a, b):
+    if a['play'][2] > b['play'][2]:
+      return a
+    if a['play'][2] < b['play'][2]:
+      return b
+    nipes_order = ['OUROS', 'ESPADAS', 'COPAS', 'PAUS']
+    if nipes_order.index(a['play'][1]) > nipes_order.index(b['play'][1]):
+      return a
     else:
-      print("Empate")
+      return b
