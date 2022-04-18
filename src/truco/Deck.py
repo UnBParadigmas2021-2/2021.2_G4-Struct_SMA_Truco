@@ -6,7 +6,6 @@ class Deck():
     def __init__(self):
         self.cards = []
         self.create_deck_of_cards()
-        self.manilhas
 
     def create_deck_of_cards(self):
         # ZAP = Cards(11, 1)
@@ -50,13 +49,21 @@ class Deck():
         random.shuffle(self.cards)
     
     def define_vira(self, deck):
-        print("antes: "+ str(self.cards[0].quantity)) # Debbug do vira antes
+        # print("antes: "+ str(self.cards[0].quantity)) # Debbug do vira antes
         self.vira = deck.remove_card() # o topo do deck se torna vira
-        print("depois: "+ str(self.cards[0].quantity)) # Debbug do vira depois
+        # print("depois: "+ str(self.cards[0].quantity)) # Debbug do vira depois
 
     def remove_card(self):
-        self.cards[0].quantity -= 1
-        return self.cards[0] # retorna a carta no topo
+        # Percorre todo o deck de cartas
+        for pos in range(10):
+            if self.cards[pos].quantity == 0: # se a carta de valor x tiver acabado, checa a seguinte do baralho
+                pos += 1
+            else:
+                break
+
+        self.cards[pos].quantity -= 1
+        self.shuffle_deck() # embaralha novamente
+        return self.cards[pos] # retorna a carta no topo
 
     def define_manilha(self):
         if self.vira.weight == 10:
@@ -68,6 +75,6 @@ class Deck():
         for i in self.cards:
             x = i.return_weight()
             if x == manilha:
-                self.manilhas.append(i)
+                self.manilhas = i
     
 
