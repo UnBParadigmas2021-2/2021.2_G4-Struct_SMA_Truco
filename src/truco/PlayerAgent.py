@@ -20,5 +20,8 @@ class PlayerAgent(Agent):
 
 
   def step(self):
-    print("Ola, eu sou o agente "+ self.name) 
-    self.set_hand()
+    if not self.mao:
+      print("Ola, eu sou o agente "+ self.name) 
+      self.set_hand()
+      return
+    print(self.name, "jogando")
