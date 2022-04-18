@@ -20,9 +20,6 @@
 ## Sobre 
 O projeto do paradigma de sistemas multiagentes visa desenvolver uma aplicação do jogo truco (com todas as regras do tipo paulista) utilizando python.
 
-## Screenshots
-Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
-
 ## Instalação 
 **Tecnologias**:   
 Para utilizar o pip nas instalações necessárias para o projeto, é necessário obter o python. Para isso:  
