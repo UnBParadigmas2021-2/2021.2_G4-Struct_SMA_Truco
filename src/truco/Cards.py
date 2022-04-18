@@ -12,6 +12,7 @@ class Cards():
 
     def return_random_naipe(self):
         random.shuffle(self.naipe)
+        self.quantity -= 1
         return self.naipe.pop()
 
     def return_number_card(self):
