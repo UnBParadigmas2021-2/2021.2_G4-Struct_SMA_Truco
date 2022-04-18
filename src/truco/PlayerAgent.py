@@ -1,3 +1,4 @@
+from time import sleep
 from mesa import Agent
 
 class PlayerAgent(Agent):
@@ -59,4 +60,4 @@ class PlayerAgent(Agent):
       self.model.play = play
 
     print(f"{self.name} Jogou um {play['play'][0]} de {play['play'][1]}")
-    
+    sleep(1)

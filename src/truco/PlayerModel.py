@@ -1,3 +1,4 @@
+from asyncio import sleep
 from mesa import Model
 from PlayerAgent import PlayerAgent
 from mesa.time import BaseScheduler
@@ -39,6 +40,7 @@ class PlayerModel(Model):
       print("Dupla 1 ganhou o jogo!")
     else:
       print("Dupla 2 ganhou o jogo!")
+    sleep(1)
 
 
   def play_round(self):
