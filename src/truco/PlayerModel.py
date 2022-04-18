@@ -9,7 +9,7 @@ class PlayerModel(Model):
   def __init__(self, N):
     self.agents = []
     self.num_agents = N
-    self.play = []
+    self.play = {}
     self.pairs_points = [0, 0]
     self.partial_pair_points = [0, 0]
     self.deck = Deck()
@@ -53,7 +53,7 @@ class PlayerModel(Model):
         print('--------------------------')
         continue
       self.step_point()
-      self.play = []
+      self.play = {}
       print('--------------------------')
       if pair := self.has_partial_winner():
         self.partial_pair_points = [0,0]
@@ -61,8 +61,9 @@ class PlayerModel(Model):
         break
 
   def step_point(self):
-    best_play = self.get_winning_play(self.get_winning_play(self.play[0], self.play[2]), 
-                                      self.get_winning_play(self.play[1], self.play[3]))
+    best_play = self.get_winning_play()
+
+    
     self.partial_pair_points[best_play['pair']] += 1
     print("Ponto da dupla", best_play['pair'] + 1)
 
@@ -75,13 +76,5 @@ class PlayerModel(Model):
       return '1'
     return False
 
-  def get_winning_play(self, a, b):
-    if a['play'][2] > b['play'][2]:
-      return a
-    if a['play'][2] < b['play'][2]:
-      return b
-    nipes_order = ['OUROS', 'ESPADAS', 'COPAS', 'PAUS']
-    if nipes_order.index(a['play'][1]) > nipes_order.index(b['play'][1]):
-      return a
-    else:
-      return b
+  def get_winning_play(self):
+    return self.play

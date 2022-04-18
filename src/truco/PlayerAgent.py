@@ -22,6 +22,35 @@ class PlayerAgent(Agent):
       print(", ".join(cards_list))
       return
 
-    play = self.mao.pop()
-    print(self.name, "joga", play[0], "de", play[1], play[2])
-    self.model.play.append({'pair': self.pair, 'play': play})
+    print('------------------------------- lista de cartas da mao ---------------------------------------')
+    print(self.mao)
+
+    max_card = 0
+    min_card = 0
+    played_card = -1
+    for i in range(len(self.mao)):
+      
+      min_card = min_card if self.mao[i][2] < self.mao[min_card][2] else i
+      max_card = max_card if self.mao[i][2] > self.mao[max_card][2] else i
+
+    if not self.model.play:
+      played_card = min_card
+    else:
+      played_card = max_card
+      
+
+
+    print('------------------------------- lista de cartas da mao ---------------------------------------')
+    play = {'pair': self.pair, 'play': self.mao[played_card]} #self.mao.pop()
+    print(f'play = {played_card}')
+
+
+    self.mao.pop(played_card)
+
+
+
+
+    #print(self.name, "joga", play[0], "de", play[1], play[2])
+
+    print(f'cartas da mesa = {self.model.play}')
+    self.model.play = play
