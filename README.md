@@ -66,7 +66,7 @@ $ pip install mesa
 $ pip install numpy   
 ```
 
-## Sobre o Jogo
+## O Truco Paulista
 
 É o tipo de truco mais comum nas jogatinas, tanto online, como em competições. É utilizado um baralho com 40 cartas (exclui-se os 8, 9, 10 e os coringas) com duas duplas.
 
