@@ -12,11 +12,11 @@ class PlayerAgent(Agent):
       card = self.deck.remove_card()
       naipe = card.return_random_naipe()
       number_card = card.return_number_card()
-      self.mao.append([number_card, card.weight, naipe])
+      self.mao.append([number_card, naipe])
 
-    # print("mao :") # Imprimindo mao para debug
-    # for i in range(3):
-    #   print(str(self.mao[i]))
+    print("mao :") # Imprimindo mao para debug
+    for i in range(3):
+      print(self.mao[i])
 
 
   def step(self):
