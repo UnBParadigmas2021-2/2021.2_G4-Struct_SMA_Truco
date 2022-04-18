@@ -13,6 +13,6 @@ RUN apt-get update && \
 
 RUN pip install mesa matplotlib jupyter numpy
 
-COPY ./src /app
+COPY ./src/truco /app
 
-ENTRYPOINT ["mesa", "runserver"]
+ENTRYPOINT ["python3", "truco/run_test.py"]
