@@ -66,6 +66,21 @@ $ pip install mesa
 $ pip install numpy   
 ```
 
+## O Truco Paulista
+
+É o tipo de truco mais comum nas jogatinas, tanto online, como em competições. É utilizado um baralho com 40 cartas (exclui-se os 8, 9, 10 e os coringas) com duas duplas.
+
+A distribuição das cartas é feita aleatoriamente, não havendo a intervenção de nenhum jogador ou membro da equipe, sendo distribuídas 3 cartas por participante.
+
+O objetivo é marcar 12 pontos primeiro através da mão batida (uma combinação de cartas que gera no mínimo um ponto por rodada, que pode ser aumentada até 12 dependendo da aposta e das opções de cartas entre as duplas).
+
+
+Cada mão é definida em três rodadas. Em cada rodada, os jogadores recebem 3 cartas, que devem ser colocadas à mesa e trocadas uns com os outros e no montante de cartas devidamente embaralhado.
+
+No final da rodada, a combinação com maior pontuação ganha a mão.
+
+Lembrando que Manilha é a carta mais forte da partida, depois do 3, e dos naipes, sendo a carta inicial na qual o primeiro jogador vira para cima antes do jogo começar, chamada de “Vira”. Toda combinação que levar esta carta terá uma pontuação maior no somatório final da rodada.
+
 ## Uso 
 Explique como usar seu projeto, caso haja algum passo a passo após o comando de execução.
 
