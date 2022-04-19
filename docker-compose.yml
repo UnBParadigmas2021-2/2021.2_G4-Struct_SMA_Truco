@@ -9,3 +9,5 @@ services:
       - './src:/app'
     ports:
       - '3000:8521'
+    tty: true
+    stdin_open: true
