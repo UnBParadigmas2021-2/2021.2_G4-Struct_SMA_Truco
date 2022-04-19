@@ -81,7 +81,7 @@ Explique como usar seu projeto, caso haja algum passo a passo após o comando de
 ![O jogo](images/game/final.jpeg)
 
 ## Vídeo
-Adicione 1 ou mais vídeos com a execução do projeto.
+[Apresentação](https://youtu.be/REPgRPFcyqg)
 
 ## Fontes
 * https://github.com/anthonyzutter/Truco-Jogo
