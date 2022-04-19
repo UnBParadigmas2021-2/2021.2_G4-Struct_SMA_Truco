@@ -83,9 +83,6 @@ Explique como usar seu projeto, caso haja algum passo a passo após o comando de
 ## Vídeo
 Adicione 1 ou mais vídeos com a execução do projeto.
 
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas a seguir.
-
 ## Fontes
 * https://github.com/anthonyzutter/Truco-Jogo
 * https://github.com/projectmesa/mesa/tree/main/examples
